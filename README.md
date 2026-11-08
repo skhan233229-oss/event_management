@@ -1,59 +1,236 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🎉 Mini Event Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A web-based Event Management System built using **Laravel 12, PHP, MySQL, Bootstrap, AJAX, and Vue.js**.
 
-## About Laravel
+This project allows administrators to manage events, categories, tickets, users, and registrations. Users can explore upcoming events and register for their preferred events.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📌 Project Overview
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+The Mini Event Management System is designed to simplify event management through a user-friendly web application.
 
-## Learning Laravel
+It provides separate functionalities for Admin and Users with role-based access control.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## ✨ Features
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 👨‍💼 Admin Features
+- Admin Login and Authentication
+- Admin Dashboard
+- Create, View, Update and Delete Events
+- Manage Event Categories
+- Manage Event Tickets
+- View All Event Registrations
+- Manage Users
+- Update User Roles
+- Delete Users
+- Search and Pagination
 
-## Laravel Sponsors
+### 👤 User Features
+- User Registration and Login
+- View Upcoming Events
+- View Event Details
+- Search Events using AJAX
+- Register for Events
+- View My Registrations
+- Cancel Event Registration
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### ⚙️ Additional Features
+- Role-Based Access Control
+- Form Validation
+- Middleware Protection
+- AJAX Search and Delete Interactions
+- Vue.js Ticket List with Search
+- Database Relationships
+- Pagination
+- CSRF Protection
+- Responsive UI
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 🛠️ Technologies Used
 
-## Contributing
+| Technology | Purpose |
+|---|---|
+| PHP 8.2 | Backend Programming |
+| Laravel 12 | PHP Framework |
+| MySQL | Database |
+| HTML5 | Page Structure |
+| CSS3 | Styling |
+| Bootstrap | Responsive UI |
+| JavaScript | Client-Side Functionality |
+| AJAX | Asynchronous Requests |
+| Vue.js | Interactive Ticket List |
+| Git & GitHub | Version Control |
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 🏗️ Project Architecture
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+This project follows the **MVC (Model-View-Controller)** architecture.
 
-## Security Vulnerabilities
+- **Model:** Handles database operations.
+- **View:** Displays the user interface using Blade templates.
+- **Controller:** Handles requests and application logic.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Application Flow
 
-## License
+Browser → Route → Controller → Model → Database → View → Browser
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+## 📂 Main Project Structure
+
+```text
+event_management/
+│
+├── app/
+│   ├── Http/
+│   │   └── Controllers/
+│   └── Models/
+│
+├── database/
+│   └── migrations/
+│
+├── resources/
+│   ├── views/
+│   ├── js/
+│   └── css/
+│
+├── routes/
+│   └── web.php
+│
+├── public/
+├── tests/
+├── package.json
+├── composer.json
+└── README.md
+```
+
+---
+
+## 🗄️ Database
+
+The application uses MySQL.
+
+Main database tables include:
+
+- users
+- events
+- categories
+- tickets
+- registrations
+- roles
+
+The application uses Laravel Eloquent ORM to interact with the database.
+
+---
+
+## 🚀 Installation & Setup
+
+Follow these steps to run the project locally.
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/skhan233229-oss/event_management.git
+```
+
+### 2. Open Project Folder
+
+```bash
+cd event_management
+```
+
+### 3. Install PHP Dependencies
+
+```bash
+composer install
+```
+
+### 4. Create Environment File
+
+```bash
+copy .env.example .env
+```
+
+Configure your MySQL database credentials inside `.env`.
+
+### 5. Generate Application Key
+
+```bash
+php artisan key:generate
+```
+
+### 6. Run Database Migrations
+
+```bash
+php artisan migrate
+```
+
+### 7. Install Frontend Dependencies
+
+```bash
+npm install
+```
+
+### 8. Build Frontend Assets
+
+```bash
+npm run build
+```
+
+### 9. Start Laravel Server
+
+```bash
+php artisan serve
+```
+
+Open in your browser:
+
+```text
+http://127.0.0.1:8000
+```
+
+---
+
+## 🔐 Security
+
+- Authentication and authorization
+- Admin middleware protection
+- CSRF protection
+- Form validation
+- Protected environment configuration
+
+**Note:** Never upload your `.env` file or database credentials to GitHub.
+
+---
+
+## 🎯 Learning Outcomes
+
+Through this project, I practiced:
+
+- Laravel MVC Architecture
+- PHP and MySQL Integration
+- CRUD Operations
+- Authentication and Authorization
+- Middleware
+- Eloquent ORM and Relationships
+- AJAX Requests
+- Vue.js Integration
+- Form Validation
+- Git and GitHub
+
+---
+
+## 👨‍💻 Developer
+
+**Afzal Ali Khan**
+
+MCA Student | Aspiring PHP & Laravel Developer
+
+GitHub: https://github.com/skhan233229-oss
+
+---
+
+⭐ If you find this project useful, feel free to explore the repository!
